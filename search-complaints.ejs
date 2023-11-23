@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>COMPLAINTS LIST</title>
+</head>
+<style>
+    
+   body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+body input{
+    margin-left:30px ;
+}
+
+.header{
+    width: 100%;
+    background-color: #c5d2da;
+    text-align: center;
+    color: rgb(16, 15, 15);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+
+}
+
+header {
+        background-color: #35495e;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+        margin-top: -10px;
+     
+        width: 100%;
+       
+        
+        
+     
+    
+    }
+    header li{
+        display: inline;
+        text-align: center;
+    }
+    header a{
+        
+        text-decoration: none;
+        color: #fdfafa;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 18px;
+        margin-left: 8px;
+        list-style: none;
+    }
+
+
+#heading {
+    background-color: #35495e;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+form{
+    margin-top: -30px;
+    margin-bottom:-20px ;
+    padding: 20px;
+    background-color: #c5d2da;
+}
+
+#search {
+    text-align: center;
+    
+}
+
+#search a {
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    color: #ffffff;
+    background-color: #35495e;
+    transition: background-color 0.3s ease;
+}
+
+#search a:hover {
+    background-color: #293846;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #35495e;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.operations a {
+    display: inline-block;
+    margin: 2px;
+    padding: 6px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #333333;
+    transition: background-color 0.3s ease;
+}
+
+.operations a.delete {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+.operations a.update {
+    background-color: #27ae60;
+    color: #ffffff;
+}
+
+.view {
+    
+    color: #080707;
+    border-collapse: collapse;
+    border: 1px solid rgb(100, 98, 98);
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 4px;
+
+}
+
+.operations a:hover {
+    background-color: #cccccc;
+}
+
+img.profile-image {
+    border-radius: 5px;
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+ 
+.footer-above table {
+        box-sizing: border-box;
+        margin-top: 100px;
+        padding-top: 30px;
+
+        
+        width: 100%;
+        height: 300px;
+        background-color: rgb(218, 225, 229);
+    }
+
+    .footer-above li {
+        list-style: none;
+
+        color: black;
+        width: 200px;
+    }
+
+
+    .latest-news{
+        box-sizing: border-box;
+        padding: 4px;
+        border-radius: 3px;
+        width: 200px;
+        height: 100px;
+        font-size: 14px;
+        background-color: white;
+        border: 1px solid black;
+    }
+
+    .footer{
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-top: 3px;
+        
+        width: 100%;
+        position: absolute;
+        
+        height: 30px;
+        color: #fdfafa;
+        background-color:  #35495e;
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="#operations">Operations</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="header">
+        
+    <h1>Search Here</h1>
+    
+    </div>
+    <form action= "/search">
+
+        <input type="search" name="name" placeholder="search name">
+        <input type="search" name="adhaar" placeholder="search Adhaar no.">
+        <input type="search" name="email" placeholder="search email">
+        <input type="search" name="mobile" placeholder="search Mobile no.">
+        
+        <input type="submit" value="search">
+
+    </form>
+    <br>
+
+    <table border="1" width="100%">
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Adhaar No.</th>
+            <th>Email</th>
+            <th>Mobile No.</th>
+            <th>Action</th>
+        
+    
+        </tr>
+        <% if(complaints.length > 0){%>
+
+            <% for(var i= 0; i < complaints.length; i++){%>
+                <tr>
+
+                    <td><%- complaints[i].id %></td>
+                    <td><%- complaints[i].name %></td>
+                    <td><%- complaints[i].adhaar %></td>
+                    <td><%- complaints[i].email %></td>
+                    <td><%- complaints[i].mobile %></td>
+                    <td> 
+                        <a class="view" href="/profile?id= <%- complaints[i].id %>">view</a>
+                    </td>
+                 
+                </tr>
+                <%} %>
+    
+        <%}else{%>
+              <tr>
+                <td>Data not found</td>
+              </tr>
+        <%}%>
+
+
+
+    </table>
+    
+    
+
+    <div class="footer-above">
+        <table>
+            <tr>
+                <td>
+                    <ul>
+                        <h3>F.I.R.Submission</h3>
+
+                        <li>
+                            <p>There are many variation in initial level.</p>
+                        </li>
+                        <li>
+                            <p>This website is run on beta version.</p>
+                        </li>
+
+                    </ul>
+
+
+
+
+                </td>
+                <td>
+
+                    <ul>
+                        <h3>Quick links</h3>
+                        
+                        <li>Home</li>
+                        <li>Operations</li>
+                        <li>Services</li>
+                        <li>Contact us</li>
+                        <li>About us</li>
+
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>
+                            <h3>Contact us</h3>
+                        </li>
+                        <li>
+                            <p>+917576567521
+                                (+91)6789656756</p>
+                        </li>
+
+                    </ul>
+
+                </td>
+                <td>
+                    <ul>
+                        <br>
+                        <li>
+                            
+                            <b>For latest update news</b>
+                            <hr width="250px" size="3" color="black" />
+                            <hr width="250px" size="3" color="black" />
+<br>
+                        </li>
+                        <li class="latest-news">
+                            There are many variation of passages of Lorem ipsum dolor
+                            
+                        </li>
+                    </ul>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="footer">
+        All rights reserved ykws. 
+    </div>
+
+
+</body>
+</html>

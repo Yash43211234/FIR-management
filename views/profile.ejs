@@ -1,0 +1,439 @@
+<Title>Profile</Title>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(237, 239, 241);
+    }
+    body input{
+        border: 1px solid rgb(163, 159, 159);
+    }
+    
+    header {
+        background-color: #35495e;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+        margin-top: -10px;
+     
+        width: 101%;
+        margin-left: -8px;
+        margin-right: 10px;
+        
+     
+    
+    }
+    header li{
+        display: inline;
+        text-align: center;
+    }
+    header a{
+        
+        text-decoration: none;
+        color: #fdfafa;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 18px;
+        margin-left: 8px;
+        list-style: none;
+    }
+
+    .HeaderImage img {
+        
+      
+        height: 200px;
+        width: 101%;
+        margin-left: -8px;
+        margin-top: -8px;
+        
+    }
+
+    .left-profile {
+        border: 2px solid rgb(155, 155, 155);
+        width: 400px;
+        height: 600px;
+        margin-top: -100px;
+        margin-left: 40px;
+        position: absolute;
+        background-color: white;
+        border-radius: 4px;
+        
+
+
+    }
+
+    .right-profile {
+        border: 2px solid rgb(155, 155, 155);
+        width: 700px;
+        height: 600px;
+        margin-top: -100px;
+        margin-left: 500px;
+        position: absolute;
+        background-color: white;
+        border-radius: 4px;
+        text-align: center;
+        
+        
+    }
+
+
+
+    .profile img {
+        border: 1px solid black;
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        margin: 35px 105px 105px 115px;
+        object-fit: cover;
+        box-shadow: 0px 0px 0px 1px ;
+    }
+
+    .profile-name {
+        text-align: center;
+        
+        margin-top: -100px;
+    }
+
+    .left-Profile-details {
+        text-align: center;
+        border-bottom: 1px solid black;
+
+        width: 100%;
+    }
+
+    .left-Profile-details td {
+        height: 50px;
+        border-top: 1px solid black;
+
+    }
+
+    .view-public-profile p {
+        width: 50%;
+        margin-left: 90px;
+        padding: 3px;
+        border-radius: 4px;
+        border: 1px solid black;
+
+
+    }
+
+    .right-row-one {
+        border-bottom: 2px solid black;
+        height: 40px;
+        
+        font-size: 24px;
+    }
+
+    .right-row-second {
+        height: 506px;
+        padding-top:20px; 
+
+    }
+
+   
+    .right-row-second-one li {
+        text-decoration: none;
+        border: 1px solid rgb(85, 82, 82);
+        border-radius: 4px;
+        height: 50px;
+        width: 250px;
+        margin: 0 0 5px 10px;
+        text-align: left;
+        padding: 6px;
+        font-size: 18px;
+        list-style: none;
+    }
+    .right-row-second-two li {
+        text-align: left;
+        text-decoration: none;
+        border: 1px solid rgb(85, 82, 82);
+        border-radius: 4px;
+        height: 50px;
+        width: 250px;
+        margin: 0 0 5px 10px;
+        padding: 6px;
+        font-size: 18px;
+        list-style: none;
+    }
+    .right-row-second-one p{
+        margin-top: 0px;
+        border-radius: 4px;
+        border: 1px solid rgb(185, 182, 182);
+        padding: 3px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+    }
+
+
+    .right-row-second-two p{
+        margin-top: 0px;
+        border-radius: 4px;
+        border: 1px solid rgb(185, 182, 182);
+        padding: 3px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px
+    }
+    .right-row-third {
+        border-top: 1px solid black;
+        height: 40px;
+        padding-top: 18px;
+        margin-top: -24px;
+        font-size: 24px;
+    }
+    .right-row-third a{
+        
+        width: 20%;
+        
+        border: 1px solid black;
+        border-radius: 4px;
+        text-decoration: none;
+        color: rgb(247, 243, 243);
+        padding: 3px;
+        font-size: 16px;
+        background-color: #35495e;
+        
+    }
+    
+    .footer-above {
+        box-sizing: border-box;
+        margin-top: 560px;
+        padding-top: 30px;
+        margin-bottom: -100px;
+
+        margin-left: -8px;
+        width: 101.17%;
+        height: 300px;
+        background-color: rgb(218, 225, 229);
+    }
+
+    .footer-above li {
+        list-style: none;
+
+        color: black;
+        width: 250px;
+    }
+
+
+    .latest-news{
+        box-sizing: border-box;
+        padding: 4px;
+        border-radius: 3px;
+        width: 200px;
+        height: 100px;
+        font-size: 14px;
+        background-color: white;
+        border: 1px solid black;
+    }
+    
+    .footer7{
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-top: 3px;
+        margin-left: -8px;
+        width: 100%;
+        position: absolute;
+        margin-top:100px ;
+        height: 30px;
+        color: #fdfafa;
+        background-color:  #35495e;
+    }
+
+</style>
+
+
+
+<body>
+
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="#operations">Operations</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <% if(complaints.length > 0 ){%>
+
+        <% for(var i= 0; i < complaints.length; i++){%>
+      
+    <div  class="HeaderImage" >
+        <img src="https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg" alt="">
+       
+    </div>
+    <table>
+        <tr>
+            <td class="left-profile">
+                <div class="profile">
+                    <% if (uploadedImage) { %>
+                        <img src="/uploads/<%=uploadedImage %>" class="profile-image" alt="Uploaded Image">  %>
+                    <% } else { %>
+                        <p>No image uploaded.</p>
+                    <% } %>
+                </div>
+
+                <div class="profile-name">
+                    <b><%- complaints[i].name %></b>
+                    <p>&nbsp Stark Industry</p>
+                </div>
+                <table class="left-Profile-details">
+                    <tr>
+                        <td> Criminal Records :</td>
+                    </tr>
+                    <tr>
+                        <td><b>Age</b> :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%- complaints[i].age %></td>
+                    </tr>
+                    <tr>
+                        <td><b> Gender</b> : <%- complaints[i].gender %></td>
+                    </tr>
+
+                    <tr>
+                        <td class="view-public-profile">
+                           <button type="button">view public profile</button>
+
+                    <tr>
+                        <td>
+                            link:
+                        </td>
+                    </tr>
+            </td>
+
+        </tr>
+
+
+    </table>
+
+
+    </td>
+
+    <td class="right-profile">
+        <div class="right-row-one">
+            Account
+        </div>
+        <div class="right-row-second">
+            <table>
+                <tr>
+                    <td class="right-row-second-one">
+                        <ul>
+                            <li><b> Adhaar No.</b>: <br><p>:<%- complaints[i].adhaar %></p></li>
+                        <li><b>Place </b> :<br><p>:<%- complaints[i].place %></p></li>
+                        <li><b>Email</b>:<br><p>:<%- complaints[i].email %></p></li>
+                        <li><b>Phone no. 1</b> :<br><p>:<%- complaints[i].phone %></p></li>
+                        <li><b>Current Address </b> : <br><p>:<%- complaints[i].address1 %></p></li>
+                        <li><b>Title </b>: <br><p> :<%- complaints[i].title %></p></li>
+                        </ul>
+                    </td>
+                    <td class="right-row-second-two">
+                        <ul>
+                        <li><b>Pan no.</b>: <br><p>:<%- complaints[i].pan %></p></li>
+                        <li><b>Pin</b>: <br><p>:<%- complaints[i].pin %></p></li>
+                        <li><b>Phone no.2</b>: <br><p>:<%- complaints[i].mobile %></p></li>
+                        <li><b>country</b>: <br><p>:<%- complaints[i].country %></p></li>
+                        <li><b>Permanent Address</b>: <br><p>:<%- complaints[i].address2 %></p></li>
+                        <li><b>Complaint</b>: <br><p>:<%- complaints[i].complaint %></p></li>
+                    </ul>
+                </td>
+            </tr>
+            
+            
+            <%} %>
+            
+            <%}else{%>
+                    <h1> data not found</h1>
+            <%}%>
+                
+            </table>
+        </div>
+        <div class="right-row-third">
+          <a type="button"  href="/complaints">Check List</a>
+        </div>
+    </td>
+    </tr>
+</table>
+
+
+
+
+<div class="footer-above">
+    <table>
+        <tr>
+            <td>
+                <ul>
+                    <h3>F.I.R.Submission</h3>
+
+                    <li>
+                        <p>There are many variation in initial level.</p>
+                    </li>
+                    <li>
+                        <p>This website is run on beta version.</p>
+                    </li>
+
+                </ul>
+
+
+
+
+            </td>
+            <td>
+
+                <ul>
+                    <h3>Quick links</h3>
+                    
+                    <li>Home</li>
+                    <li>Operations</li>
+                    <li>Services</li>
+                    <li>Contact us</li>
+                    <li>About us</li>
+
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>
+                        <h3>Contact us</h3>
+                    </li>
+                    <li>
+                        <p>+917576567521
+                            (+91)6789656756</p>
+                    </li>
+
+                </ul>
+
+            </td>
+            <td>
+                <ul>
+                    <br>
+                    <li>
+                        
+                        <b>For latest update news</b>
+                        <hr width="250px" size="3" color="black" />
+                        <hr width="250px" size="3" color="black" />
+<br>
+                    </li>
+                    <li class="latest-news">
+                        There are many variation of passages of Lorem ipsum dolor
+                        
+                    </li>
+                </ul>
+
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+
+<div class="footer7">
+    By reserved Rights ykws
+</div>
+
+ 
+</body>
+
+            

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Home</title>
+</head>
+<style>
+
+
+
+    body,
+    h1,
+    h2,
+    h3,
+    p,
+    ul,
+    li,
+    form,
+    input,
+    textarea,
+    button {
+        
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: aliceblue;
+    }
+
+    header {
+        background-color: #35495e;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style: none;
+        
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+      
+    }
+
+    section {
+        padding: 40px;
+    }
+
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .hero-content {
+        text-align: center;
+        color: #333;
+    }
+
+    .profile-info {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .profile-info h2 {
+        font-size: 24px;
+    }
+
+    .profile-info p {
+        font-size: 18px;
+        color: #666;
+    }
+    .profile-image img{
+        width: 100%;
+        height: 400px;
+        border-radius: 4px;
+    }
+
+    .container h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    #services li{
+        text-align: center;
+        list-style: none;
+    }
+    
+    .add img{
+        
+        box-shadow:0 13px rgb(121, 188, 216);
+        padding-bottom: -10px;
+        
+        width: 125px;
+        height: 115px;
+        border-radius: 50%;
+    }
+    
+    .search  img{
+        box-shadow:0 13px rgb(68, 130, 156);
+        margin-left:84px ;
+        width: 120px;
+        height: 110px;
+        border-radius: 50%;
+        
+    }
+    .list img{
+        
+        box-shadow:0 11px rgb(88, 219, 199);
+        padding-bottom: 10px;
+        margin-left:84px ;
+        width: 132px;
+        height: 110px;
+        border-radius: 50%;
+    
+    }
+    #operations{
+        padding-left: 280px;
+        padding-top: 100px;
+      
+        height: 300px;
+    }
+    #operations h2 p{
+        margin-left: -270px;
+        
+    }
+    .container table{
+        background-color: white;
+        border: 1px solid black;
+        padding: 60px;
+        border-radius: 5px;
+        
+    }
+
+
+    form input,
+    form textarea,
+    form button {
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        background-color: #35495e;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    footer {
+        background-color: #35495e;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+    }
+
+
+    header a:hover{
+        margin:2px ;
+        padding: 2px;
+        border-radius: 4px;
+        color: black;
+        background-color: #eeeff1;
+    }
+    .add img:hover{
+        padding-top: 4px;
+        box-shadow:0px 2px rgb(3, 32, 65) ;
+    }
+    
+    .search img:hover{
+        padding-top: 4px;
+        box-shadow: 0 4px rgb(68, 130, 156);
+    
+    }
+    .list img:hover{
+        padding-top: 2px;
+        box-shadow:0px 2px rgb(3, 32, 65) ;
+        
+    }
+
+    
+    .footer-above {
+        box-sizing: border-box;
+        margin-top: 100px;
+        padding-top: 30px;
+        padding-left: 50px;
+
+        
+        width: 100%;
+        height: 300px;
+        background-color: rgb(218, 225, 229);
+    }
+
+    .footer-above li {
+        list-style: none;
+        
+        color: black;
+        width: 250px;
+    }
+
+
+    .latest-news{
+        box-sizing: border-box;
+        padding: 4px;
+        border-radius: 3px;
+        width: 200px;
+        height: 100px;
+        font-size: 14px;
+        background-color: white;
+        border: 1px solid black;
+    }
+
+   
+</style>
+
+<body>
+  
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#operations">Operations</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+
+            <p>Welcome to this website!</p>
+        </div>
+    </section>
+
+    <section id="profile">
+        <div class="container">
+            <div class="profile-image">
+                <img src="https://i.pinimg.com/564x/96/f9/89/96f989d1a14e8fe77f3032e560a0f033.jpg" alt="Profile Image">
+            </div>
+            <div class="profile-info">
+           
+            </div>
+        </div>
+    </section>
+
+
+
+   
+
+    <section id="services">
+        <div class="container">
+            <h2>Services</h2>
+            <ul>
+                <li>Registration of complaints can be possible. </li>
+                <li>List creation of all complaints in a sequence.</li>
+                <li>check specific profile as well as all data of that person within view. </li>
+                <li>Update data of a specifc profile data smoothly.</li>
+                <li>Delete your profile with one click.</li>
+                
+            </ul>
+        </div>
+    </section>
+
+
+
+    <section id="operations">
+        <div class="container">
+            <h2><p>OPERATIONS</p> <br><br></h2>
+
+            <table>
+                <tr>
+                    <td class="add">
+                        <a href="/register"><img  src="https://cdn4.iconfinder.com/data/icons/meBaze-Freebies/512/add.png" alt=""></a>
+                        
+                    </td>
+                    <td  class="search">
+                        <a href="/search-complaints"><img src="https://i.pinimg.com/564x/68/61/ac/6861acf7bb53587098695f3c9abc0899.jpg" alt=""></a>
+                        
+                    </td>
+                    <td class="list">
+                    <a href="/complaints"><img  src="http://3atranslation.com/img/Quality_Process_image1.jpg" alt=""></a>
+                    
+                </td>
+                    </tr>
+                    
+            </table>
+            
+
+
+
+
+
+        </div>
+
+
+    </section>
+    <section id="events">
+        <div class="container">
+            <br><br><h2>Events</h2>
+            <ul>
+                <li><b>User Registration:</b>
+
+                    User creates an account on the platform by providing personal details and credentials.
+                    The system validates the information and generates a unique user ID.</li>
+                <li><b>Profile View:</b>
+
+                    User logs into their account and accesses their profile.
+                    The profile displays the user's personal information, contact details, and a list of previous complaints.</li>
+                <li><b>Registering a Complaint:</b>
+
+                    User navigates to the "Register Complaint" section.
+                    User selects the appropriate category and subcategory for the complaint (e.g., product issue, service problem).
+                    User provides a detailed description of the complaint, along with any relevant attachments or evidence.
+                    After submission, the system assigns a unique complaint ID and records the date and time of the complaint.</li>
+                <li><b>Searching for Complaints:</b>
+
+                    User accesses the "Search Complaints" or "View All Complaints" section.
+                    User can filter complaints based on various criteria such as date, category, status, or keywords.
+                    The system retrieves and displays a list of complaints matching the specified criteria.
+                    
+                
+                </li>
+                <li><b>Complaint Updation:</b>
+
+                    User logs into their account and accesses the "My Complaints" section.
+                    User selects the specific complaint they want to update.
+                    User can add more details, attach additional files, or provide new information related to the complaint.
+                    The system updates the complaint record with the new information and logs the update date and time</li>
+                <li><b>Continuous Improvement:</b>
+
+                    The system can generate reports and analytics on complaint trends, resolution times, and user satisfaction.
+                    Based on these insights, the organization can make improvements to their products, services, and customer support processes.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Introduction:
+
+                A brief introduction to the company or platform, highlighting its mission, values, and goals.
+                Emphasis on the purpose of the platform, such as providing a space for complaint resolution and customer support.</p>
+            <p>Team:
+
+                Introductions to key members of the team, including founders, executives, and other important roles.
+                Brief bios and photos can be included to create a personal connection.</p>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="mno" name="mno" placeholder="Your Mobile no.(optional)">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+    <div class="footer-above">
+        <table>
+            <tr>
+                <td>
+                    <ul>
+                        <h3>F.I.R.Submission</h3>
+<br>
+
+                        <li>
+                            <p>There are many variation in initial level.</p>
+                        </li>
+                        <li>
+                            <p>This website is run on beta version.</p>
+                        </li>
+
+                    </ul>
+
+
+
+
+                </td>
+                <td>
+
+                    <ul>
+                        <h3>Quick links</h3>
+                        <br>
+                        <li>Home</li>
+                        <li>Operations</li>
+                        <li>Services</li>
+                        <li>Contact us</li>
+                        <li>About us</li>
+
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>
+                            <h3>Contact us</h3>
+                        </li>
+                        <li>
+                            <p>+917576567521
+                     <br>           (+91)6789656756</p>
+                        </li>
+
+                    </ul>
+
+                </td>
+                <td>
+                    <ul>
+                        <br>
+                        <li>
+                            
+                            <b>For latest update news</b>
+                            <hr width="250px" size="3" color="black" />
+                            <hr width="250px" size="3" color="black" />
+<br>
+                        </li>
+                        <li class="latest-news">
+                            There are many variation of passages of Lorem ipsum dolor
+                            
+                        </li>
+                    </ul>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <footer>
+        <p>&copy; 2023 iamyash |  Content Creator</p>
+    </footer>
+
+   
+</body>
+
+</html>

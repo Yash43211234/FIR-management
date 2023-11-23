@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<style>
+    body {
+        font-size: 17px;
+    }
+
+    header {
+        background-color: #35495e;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        margin: -19px 0px 28px -8px;
+
+        width: 101.14%;
+        text-align: center;
+
+
+    }
+
+    header li {
+        display: inline;
+        text-align: center;
+    }
+
+    header a {
+
+        text-decoration: none;
+        color: #fdfafa;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 18px;
+        margin-left: 8px;
+        list-style: none;
+    }
+
+    .Header-Image {
+        background-color: #35495e;
+        margin-left: -8px;
+        width: 101.17%;
+        height: 100px;
+        margin-top: -20px;
+    }
+
+
+    .content h1 {
+        margin-left: 70px;
+        margin-top: -60px;
+        position: absolute;
+        font-size: 24px;
+        color: rgb(253, 254, 255);
+
+
+
+    }
+
+    .content img {
+        border-radius: 50%;
+
+        width: 30px;
+        margin-right: 20px;
+
+        height: 30px;
+
+    }
+
+    .content h2 {
+
+
+        margin-left: -8px;
+        width: 101.17%;
+        margin-top: 0px;
+        padding-bottom: 10px;
+        padding-top: 5px;
+        text-align: center;
+        background-color: rgb(218, 225, 229);
+    }
+
+    .content h3 {
+        margin-top: -15px;
+        text-align: center;
+    }
+
+    .content a {
+        text-decoration: none;
+        margin-left: 380px;
+        margin-top: -60px;
+        position: absolute;
+        font-size: 15px;
+
+        color: rgb(245, 240, 240);
+        border: 1px solid black;
+        border-radius: 4px;
+        background-color: rgb(27, 68, 188);
+        padding: 3px;
+        box-shadow: 3px 2px rgb(1, 1, 65);
+    }
+
+    .name {
+        margin-left: 294px;
+    }
+
+    .name input {
+        margin-left: 10px;
+        width: 600px;
+
+    }
+
+    h3 {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .content-column-one li {
+        margin-left: 250px;
+        list-style: none;
+        margin-bottom: 22px;
+    }
+
+    .content-column-two li {
+        margin-left: 60px;
+        list-style: none;
+        margin-bottom: 22px;
+    }
+
+    .complaint-details img {
+
+        margin-left: -6px;
+        width: 101.4%;
+        height: 30px;
+    }
+
+    .complaint-details h2 {
+        position: absolute;
+
+        margin-left: 70px;
+
+    }
+
+    .submit {
+        text-align: center;
+    }
+
+    .submit button {
+        background-color: #35495e;
+        color: white;
+        margin-top: 20px;
+        border-radius: 4px;
+
+    }
+
+    
+
+    .footer-above {
+        box-sizing: border-box;
+        margin-top: 100px;
+        padding-top: 30px;
+
+        margin-left: -8px;
+        width: 101.17%;
+        height: 300px;
+        background-color: rgb(218, 225, 229);
+    }
+
+    .footer-above li {
+        list-style: none;
+
+        color: black;
+        width: 250px;
+    }
+
+
+    .latest-news{
+        box-sizing: border-box;
+        padding: 4px;
+        border-radius: 3px;
+        width: 200px;
+        height: 100px;
+        font-size: 14px;
+        background-color: white;
+        border: 1px solid black;
+    }
+    .footer {
+        box-sizing: border-box;
+        background-color: #35495e;
+        padding: 10px;
+        margin-left: -8px;
+        width: 101.17%;
+        height: 40px;
+        color: white;
+    }
+    
+</style>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="#operations">Operations</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="Header-Image">
+
+    </div>
+    <div class="content">
+        <h1>
+
+
+            <table>
+                <tr>
+                    <td><img src="https://i.pinimg.com/474x/bd/43/7f/bd437fe8e7510e0d028bc4cb36f59bb3.jpg" alt=""></td>
+                    <td>F.I.R. ENTRY</td>
+                </tr>
+            </table>
+
+
+        </h1>
+
+        <h2>Update Complaint</h2>
+        <h3><u>Personal Details</u></h3>
+
+        <form action="" method="POST" >
+            <table>
+                <tr>
+                    <div class="name">
+                        <input type="hidden" name="id" value="<%= complaints[0].id %> " >
+                        Name :
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="name" name="name" id=""  value="<%= complaints[0].name %> " placeholder="Enter name" required>
+                    </div>
+                </tr>
+                <tr class="content-columns">
+                    <td class="content-column-one">
+                        <ul>
+                            <li> Gender :
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                                    type="gender" name="gender" id=""  value="<%= complaints[0].gender %> " placeholder="Enter gender" required></li>
+                            <li> Current Address : &nbsp;&nbsp;<input type="address1" name="address1" id=""  value="<%= complaints[0].address1 %> "
+                                    placeholder="Enter current address" required></li>
+                            <li> Place
+                                :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="place" name="place" id="" value="<%= complaints[0].place %> " placeholder="Enter place" required></li>
+                            <li>Phone no.
+                                :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                                    type="phone" name="phone" id="" value="<%= complaints[0].phone %> " placeholder="Enter Phone no.1" pattern="[0-9]{10}" required></li>
+                            <li> Email
+                                :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                                    type="email" name="email" id=""  value="<%= complaints[0].email %> " placeholder="Enter Email" required></li>
+                            <li> Adhaar No. :&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="adhaar"
+                                    name="adhaar" id=""  value="<%= complaints[0].adhaar %> " placeholder="Enter adhaar no." pattern="[0-9]{12}" required></li>
+
+
+
+
+                        </ul>
+                    </td>
+
+                    <td class="content-column-two">
+                        <ul>
+                            <li>Age
+                                :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                                    type="number" name="age" id=""  value="<%= complaints[0].age %> " placeholder="Enter age" pattern="[0-9]{2}" required></li>
+                            <li> Permanent Address :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="address2"
+                                    name="address2" id="" value="<%= complaints[0].address2 %> " placeholder="Enter permanent address" required></li>
+                            <li> Pin No.
+                                :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                                    type="pin" name="pin" id=""  value="<%= complaints[0].pin %> " placeholder="Enter pin" pattern="[0-9]{6}" required></li>
+                            <li> Phone No.
+                                :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                                    type="mobile" name="mobile" id=""  value="<%= complaints[0].mobile %> " placeholder="Enter Phone no.2 (Optional)" pattern="[0-9]{10}" ></li>
+                            <li> Country
+                                :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                                    type="text" value="<%= complaints[0].country %> "  placeholder="Enter Country " required></li>
+                            <li> Pan No. : &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="pan" name="pan" id="" value="<%= complaints[0].pan %> "
+                                    placeholder="Enter pan no." pattern="[0-9,a-z]{10}"required></li>
+
+
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <div class="complaint-details">
+
+
+                <h3><u>Complaint details</u></h3>
+                <br>
+              
+
+                <br>
+                <div class="name">
+                    Title
+                    :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                        type="title" name="title" id=""  value="<%= complaints[0].title %> "  placeholder="Complaint Title"><br>
+
+                </div>
+                <br>
+                <div class="name">
+                    COMPLAINT :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="complaint" id="" cols="80" rows="6"
+                    value="<%= complaints[0].complaint %> "    placeholder="Enter Complaint"></textarea>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+            <br>
+    </div>
+
+    <div class="submit">
+        <button value="submit">Update</button>
+    </div>
+
+    </form>
+    <div class="footer-above">
+        <table>
+            <tr>
+                <td>
+                    <ul>
+                        <h3>F.I.R.Submission</h3>
+
+                        <li>
+                            <p>There are many variation in initial level.</p>
+                        </li>
+                        <li>
+                            <p>This website is run on beta version.</p>
+                        </li>
+
+                    </ul>
+
+
+
+
+                </td>
+                <td>
+
+                    <ul>
+                        <h3>Quick links</h3>
+                        
+                        <li>Home</li>
+                        <li>Operations</li>
+                        <li>Services</li>
+                        <li>Contact us</li>
+                        <li>About us</li>
+
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>
+                            <h3>Contact us</h3>
+                        </li>
+                        <li>
+                            <p>+917576567521
+                                (+91)6789656756</p>
+                        </li>
+
+                    </ul>
+
+                </td>
+                <td>
+                    <ul>
+                        <br>
+                        <li>
+                            
+                            <b>For latest update news</b>
+                            <hr width="250px" size="3" color="black" />
+                            <hr width="250px" size="3" color="black" />
+<br>
+                        </li>
+                        <li class="latest-news">
+                            There are many variation of passages of Lorem ipsum dolor
+                            
+                        </li>
+                    </ul>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="footer">
+        All rights reserved ykws. 
+    </div>
+</body>
+
+</html>
